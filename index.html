@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Club Information</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            background-attachment: fixed;
+            background-image: url('https://www.millbrookschool.org.uk/_site/data/files/images/auto_upload/F8E20D5CAC48AD90C888C1D3DB7CA983.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(249,243,243,0.8); /* Light maroon tint */
+            color: #000000; /* Black text color */
+        }
+        h1 {
+            color: #000000; /* Black color for heading */
+            text-align: center;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            color: #000000;
+        }
+        button {
+            background-color: #0066ff;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgb(91, 252, 139);
+            border-color: rgb(0, 0, 0);
+        }
+        #club-info {
+            background-color: #fff0f0; /* Very light maroon tint */
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #000000;
+            color: #000000;
+        }
+        label {
+            font-weight: bold;
+            color: #000000;
+        }
+        option {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: rgba(255, 255, 255, 0.95); padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <h1>School Club Information</h1>
+    
+    <label for="club-select">Select a club:</label>
+    <select id="club-select">
+        <option value="">-- Select a club --</option>
+        <option value="chess">Chess Club</option>
+        <option value="math">Math Club</option>
+        <option value="robotics">Robotics Club</option>
+        <option value="debate">Debate Club</option>
+        <option value="art">Art Club</option>
+    </select>
+    
+    <button id="show-info" py-click="show_club_info">Show Club Information</button>
+
+    <pre id="club-info"></pre>
+
+    </div>
+    <script type="py" src="main.py"></script>
+</body>
+</html>
