@@ -69,4 +69,6 @@ def show_club_info(e):
     <p><b>Category:</b> {info['category']}</p>
     """
 
+
     display(output, target="club-info")
+    document.getElementById("club-info").innerHTML = output
